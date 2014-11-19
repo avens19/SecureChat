@@ -120,7 +120,11 @@ public class ChatWindow extends Activity {
 				public void run(){
 					try {
 						API.SendMessage(thisChat.id, m, Settings.getToken(ChatWindow.this));
-						et.setText("");
+						ChatWindow.this.runOnUiThread(new Runnable(){
+							public void run(){
+								et.setText("");
+							}
+						});
 						load();
 					} catch (IOException e) {
 						e.printStackTrace();
