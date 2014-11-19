@@ -10,7 +10,7 @@ import org.json.JSONObject;
 import com.google.gson.Gson;
 
 public class API {
-private static String baseUrl = "http://securechatserver.azurewebsites.net/";
+private static String baseUrl = "https://securechatserver.azurewebsites.net/";
 
 	public static void Register(String name, String username, String password, 
 			String confirmPassword, String publicKey) throws JSONException, IOException
